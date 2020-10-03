@@ -9,7 +9,7 @@ public class PointerInputCreator : MonoBehaviour
     [SerializeField]
     private TouchPointerInput _touchInputPrefab = null;
 
-    protected virtual void Start()
+    protected virtual void Awake()
 	{
         if (Application.isMobilePlatform && !Application.isEditor)
             Instantiate(_touchInputPrefab);
