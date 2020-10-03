@@ -7,8 +7,6 @@ public class PlayerInput : MonoBehaviour
 {
     private PointerInput _pointerInput;
     private PlayerActionActivator _playerActionActivator;
-    [SerializeField]
-    private float _dashForce = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -31,5 +29,11 @@ public class PlayerInput : MonoBehaviour
     private void onDrag(DragEventArgs args)
     {
         _playerActionActivator.RequestDash(args.Direction);
+    }
+
+    protected virtual void OnDestroy()
+	{
+        _pointerInput.OnClick -= onClick;
+        _pointerInput.OnDragFinished -= onDrag;
     }
 }

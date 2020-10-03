@@ -12,8 +12,8 @@ public class PointerInputCreator : MonoBehaviour
     protected virtual void Awake()
 	{
         if (Application.isMobilePlatform && !Application.isEditor)
-            Instantiate(_touchInputPrefab);
+            Instantiate(_touchInputPrefab, this.transform);
         else
-            Instantiate(_mouseInputPrefab);
+            Instantiate(_mouseInputPrefab, this.transform);
 	}
 }

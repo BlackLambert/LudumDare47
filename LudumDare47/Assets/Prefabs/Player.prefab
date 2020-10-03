@@ -299,7 +299,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0afd2f5c0a452c44a5ce678fb2c4a18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dashForce: 10000
 --- !u!114 &768564571186164492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,3 +313,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 1550547958799115063}
   _base: {fileID: 1550547958799115062}
+  _dashForce: 2500
