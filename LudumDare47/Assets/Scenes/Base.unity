@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54d715d7781291545b8fddca40c09ed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneName: TestScene
+  _sceneName: InfinityPool
 --- !u!1 &1927466967
 GameObject:
   m_ObjectHideFlags: 0
