@@ -159,10 +159,9 @@ GameObject:
   - component: {fileID: 1550547958799115057}
   - component: {fileID: 1550547958799115063}
   - component: {fileID: 1550547958799115059}
-  - component: {fileID: 1550547958799115056}
   - component: {fileID: 1550547958799115068}
   - component: {fileID: 4814251247936616143}
-  - component: {fileID: 669941922586756199}
+  - component: {fileID: 768564571186164492}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -179,7 +178,7 @@ Transform:
   m_GameObject: {fileID: 1550547958799115062}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 1.76, y: 2.64, z: -0.64764106}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1550547957828626021}
   m_Father: {fileID: 0}
@@ -249,7 +248,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 8
-  m_LinearDrag: 1.5
+  m_LinearDrag: 1
   m_AngularDrag: 1
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: 18c0dd6f1c64f914c8582ca205939313, type: 2}
@@ -272,20 +271,6 @@ MonoBehaviour:
   _rigidbody: {fileID: 1550547958799115063}
   _direction: {x: -1, y: 1}
   _speed: 0
---- !u!114 &1550547958799115056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1550547958799115062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0671ecd8f2bdaa64b9e5cfcc5b31e110, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _rigidbody: {fileID: 1550547958799115063}
-  _cap: 10
 --- !u!58 &1550547958799115068
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -301,7 +286,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.02}
   serializedVersion: 2
-  m_Radius: 0.2
+  m_Radius: 0.73
 --- !u!114 &4814251247936616143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,9 +299,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0afd2f5c0a452c44a5ce678fb2c4a18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 669941922586756199}
-  _dashForce: 1400
---- !u!114 &669941922586756199
+  _dashForce: 10000
+--- !u!114 &768564571186164492
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -329,3 +313,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 1550547958799115063}
+  _base: {fileID: 1550547958799115062}
