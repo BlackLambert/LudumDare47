@@ -315,7 +315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 669941922586756199}
-  _dashForce: 1200
+  _dashForce: 1400
 --- !u!114 &669941922586756199
 MonoBehaviour:
   m_ObjectHideFlags: 0

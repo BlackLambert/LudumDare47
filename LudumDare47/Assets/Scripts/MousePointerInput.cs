@@ -44,7 +44,7 @@ public class MousePointerInput : PointerInput
 	{
 		if (_downTime > ClickMaxTime || Distance.magnitude > ClickPositionThreshold)
 			return;
-		OnClick(new ClickEventArgs(_downPos));
+		OnClick?.Invoke(new ClickEventArgs(_downPos));
 	}
 
 	private void checkDragging()
@@ -53,14 +53,14 @@ public class MousePointerInput : PointerInput
 			return;
 		if (Distance.magnitude < MinDragDistance)
 			return;
-		OnDragging(new DragEventArgs(_downPos, Distance));
+		OnDragging?.Invoke(new DragEventArgs(_downPos, Distance));
 	}
 
 	private void checkDragFinished()
 	{
 		if (Distance.magnitude < MinDragDistance)
 			return;
-		OnDragFinished(new DragEventArgs(_downPos, Distance));
+		OnDragFinished?.Invoke(new DragEventArgs(_downPos, Distance));
 	}
 
 	private void increaseDownTime()
