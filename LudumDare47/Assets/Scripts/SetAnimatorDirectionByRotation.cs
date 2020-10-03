@@ -14,7 +14,7 @@ public class SetAnimatorDirectionByRotation : MonoBehaviour
     protected virtual void Update()
 	{
         float direction = _referenceTransform.rotation.eulerAngles.z / (360);
-        Debug.Log($"Angle: {_referenceTransform.rotation.eulerAngles.z} | Value: {direction}");
+        //Debug.Log($"Angle: {_referenceTransform.rotation.eulerAngles.z} | Value: {direction}");
         _animator.SetFloat(_propertyName, direction);
     }
 }
