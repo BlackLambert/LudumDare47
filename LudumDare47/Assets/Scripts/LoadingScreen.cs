@@ -14,6 +14,10 @@ public class LoadingScreen : MonoBehaviour
     [SerializeField]
     private GameObject _canvas = null;
 
+    protected virtual void Start()
+	{
+
+	}
 
     public void Display()
 	{
