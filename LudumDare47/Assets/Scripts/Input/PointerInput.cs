@@ -5,6 +5,7 @@ public abstract class PointerInput : MonoBehaviour
 {
     public abstract event Action<ClickEventArgs> OnClick;
     public abstract event Action<DragEventArgs> OnDragFinished;
+    public abstract event Action<DragEventArgs> OnDragStart;
     public abstract event Action<DragEventArgs> OnDragging;
 
     [SerializeField]

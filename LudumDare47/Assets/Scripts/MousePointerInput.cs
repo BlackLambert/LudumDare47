@@ -8,12 +8,14 @@ public class MousePointerInput : PointerInput
 	public override event Action<ClickEventArgs> OnClick;
 	public override event Action<DragEventArgs> OnDragFinished;
 	public override event Action<DragEventArgs> OnDragging;
+	public override event Action<DragEventArgs> OnDragStart;
 
 	protected Vector2 Distance { get { return (Vector2) Input.mousePosition - _downPos; } }
 
 	private float _downTime = 0;
 	private Vector2 _downPos = Vector2.zero;
 	private bool _isDown = false;
+	private bool _dragging = false;
 
 	protected virtual void Update()
 	{
@@ -53,6 +55,11 @@ public class MousePointerInput : PointerInput
 			return;
 		if (Distance.magnitude < MinDragDistance)
 			return;
+		if(!_dragging)
+		{
+			_dragging = true;
+			OnDragStart?.Invoke(new DragEventArgs(_downPos, Distance));
+		}
 		OnDragging?.Invoke(new DragEventArgs(_downPos, Distance));
 	}
 
@@ -75,5 +82,6 @@ public class MousePointerInput : PointerInput
 		_downPos = Vector2.zero;
 		_isDown = false;
 		_downTime = 0;
+		_dragging = false;
 	}
 }
