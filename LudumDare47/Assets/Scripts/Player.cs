@@ -22,6 +22,8 @@ public class Player : MonoBehaviour
     private Animator _splashBackAnimator = null;
     [SerializeField]
     private Animator _splashFrontAnimator = null;
+    [SerializeField]
+    private Splash _splashPrefab = null;
 
     protected virtual void Start()
 	{
@@ -45,6 +47,9 @@ public class Player : MonoBehaviour
         _splashBackAnimator.SetTrigger(_splashTriggerName);
         _splashFrontAnimator.SetTrigger(_splashTriggerName);
         _splashRadiusObject.SetActive(true);
+        Splash splash = Instantiate(_splashPrefab, null);
+        Vector3 playerPos = _base.transform.position;
+        splash.transform.position = playerPos;
         yield return new WaitForSeconds(0.1f);
         _splashRadiusObject.SetActive(false);
     }

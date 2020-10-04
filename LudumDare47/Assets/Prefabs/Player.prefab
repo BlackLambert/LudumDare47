@@ -305,6 +305,7 @@ MonoBehaviour:
   _splashRadiusObject: {fileID: 2158379405977769486}
   _splashBackAnimator: {fileID: 5563287342542327951}
   _splashFrontAnimator: {fileID: 2624108713077054814}
+  _splashPrefab: {fileID: 7772600009772505919, guid: 51414494e706f384da86d278e325d7af, type: 3}
 --- !u!58 &6577899028694735628
 CircleCollider2D:
   m_ObjectHideFlags: 0
