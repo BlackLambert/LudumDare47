@@ -296,7 +296,6 @@ GameObject:
   - component: {fileID: 8679705821773383148}
   - component: {fileID: 8679705821773383137}
   - component: {fileID: 8679705821773383138}
-  - component: {fileID: 8679705821773383139}
   m_Layer: 5
   m_Name: EnergyImage
   m_TagString: Untagged
@@ -321,7 +320,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 50, y: 50}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &8679705821773383137
 CanvasRenderer:
@@ -351,7 +350,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6dc0842ceb37bc445aab3e7d6306f9a2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 88534f374f16c5a4ba587362d476cd73, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -361,26 +360,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8679705821773383139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8679705821773383149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreLayout: 0
-  m_MinWidth: -1
-  m_MinHeight: -1
-  m_PreferredWidth: 50
-  m_PreferredHeight: 50
-  m_FlexibleWidth: -1
-  m_FlexibleHeight: -1
-  m_LayoutPriority: 1
 --- !u!1 &8679705821832908880
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,8 +395,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 20, y: -20}
-  m_SizeDelta: {x: 404.12012, y: 50}
+  m_AnchoredPosition: {x: 59, y: -42}
+  m_SizeDelta: {x: 536.69366, y: 119.416626}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &8679705821832908886
 CanvasRenderer:
@@ -437,7 +416,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8679705821846476176}
   - component: {fileID: 8679705821846476182}
-  - component: {fileID: 8679705821846476183}
   - component: {fileID: 5637936517787399765}
   m_Layer: 5
   m_Name: Slider
@@ -465,8 +443,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 60, y: 0}
-  m_SizeDelta: {x: 300, y: 30}
+  m_AnchoredPosition: {x: 118.35, y: 0.00002670288}
+  m_SizeDelta: {x: 418.3437, y: 55.24243}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &8679705821846476182
 MonoBehaviour:
@@ -518,26 +496,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &8679705821846476183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8679705821846476177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreLayout: 0
-  m_MinWidth: -1
-  m_MinHeight: -1
-  m_PreferredWidth: 300
-  m_PreferredHeight: 30
-  m_FlexibleWidth: -1
-  m_FlexibleHeight: -1
-  m_LayoutPriority: 1
 --- !u!114 &5637936517787399765
 MonoBehaviour:
   m_ObjectHideFlags: 0
