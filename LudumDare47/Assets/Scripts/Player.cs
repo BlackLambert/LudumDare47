@@ -16,6 +16,13 @@ public class Player : MonoBehaviour
     private float _dashForce = 100f;
     [SerializeField]
     private Animator _animator = null;
+    [SerializeField]
+    private GameObject _splashRadiusObject = null;
+
+    protected virtual void Start()
+	{
+        _splashRadiusObject.SetActive(false);
+    }
 
     public void Dash(Vector2 direction)
 	{
@@ -24,6 +31,15 @@ public class Player : MonoBehaviour
 
     public void Splash()
 	{
+        StartCoroutine(triggerSplash());
+    }
+
+    private IEnumerator triggerSplash()
+	{
         _animator.SetTrigger(_splashTriggerName);
+        yield return new WaitForSeconds(0.2f);
+        _splashRadiusObject.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
+        _splashRadiusObject.SetActive(false);
     }
 }
