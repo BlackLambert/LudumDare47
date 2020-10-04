@@ -22,6 +22,14 @@ public class ToggleSettings : MonoBehaviour
 
     private void toggle()
 	{
+        StartCoroutine(lateToggle());
+    }
+
+    private IEnumerator lateToggle()
+	{
+        yield return new WaitForSeconds(0);
+        yield return new WaitForSeconds(0);
         _settings.SetActive(!_settings.activeSelf);
     }
+
 }

@@ -24,6 +24,7 @@ public class PlayerActionActivator : MonoBehaviour
     private float _splashTimeStamp = 0;
     private Game _game;
     private Player _player;
+    public bool ActionsEnabled { get; set; } = true;
 
     protected virtual void Start()
 	{
@@ -38,7 +39,7 @@ public class PlayerActionActivator : MonoBehaviour
     public void RequestDash(Vector2 direction)
 	{
         float timeDifference = Time.realtimeSinceStartup - _dashTimeStamp;
-        if (timeDifference < _dashDuration)
+        if (timeDifference < _dashDuration || !ActionsEnabled)
             return;
         if (!_game.HasEnergy(_energyPerDash))
         {
@@ -53,7 +54,7 @@ public class PlayerActionActivator : MonoBehaviour
     public void RequestSplash()
 	{
         float timeDifference = Time.realtimeSinceStartup - _splashTimeStamp;
-        if (timeDifference < _splashDuration)
+        if (timeDifference < _splashDuration || !ActionsEnabled)
             return;
         if (!_game.HasEnergy(_energyPerSplash))
         {
