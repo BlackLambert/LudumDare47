@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    private const string _splashTriggerName = "Splash";
+
     [SerializeField]
     private Rigidbody2D _rigidbody = null;
     public Rigidbody2D Rigidbody { get { return _rigidbody; } }
@@ -12,6 +14,8 @@ public class Player : MonoBehaviour
     public GameObject Base { get { return _base; } }
     [SerializeField]
     private float _dashForce = 100f;
+    [SerializeField]
+    private Animator _animator = null;
 
     public void Dash(Vector2 direction)
 	{
@@ -20,6 +24,6 @@ public class Player : MonoBehaviour
 
     public void Splash()
 	{
-
-	}
+        _animator.SetTrigger(_splashTriggerName);
+    }
 }

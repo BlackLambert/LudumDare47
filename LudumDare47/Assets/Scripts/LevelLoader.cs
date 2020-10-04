@@ -7,20 +7,16 @@ public class LevelLoader : MonoBehaviour
 {
 	[SerializeField]
 	private List<string> _scenesToLoad = new List<string>();
-	[SerializeField]
-	private List<string> _scenesToUnload = new List<string>();
 
     public IEnumerator Load()
 	{
+		yield return new WaitForSeconds(0);
 		foreach(string sceneName in _scenesToLoad)
 		{
-			yield return new WaitForSeconds(0);
-			SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
-		}
-		foreach (string sceneName in _scenesToUnload)
-		{
-			yield return new WaitForSeconds(0);
-			SceneManager.UnloadSceneAsync(sceneName);
+			if(sceneName == _scenesToLoad[0])
+				SceneManager.LoadSceneAsync(sceneName);
+			else
+				SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
 		}
 	}
 }

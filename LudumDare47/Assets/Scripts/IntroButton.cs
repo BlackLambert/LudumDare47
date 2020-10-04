@@ -28,8 +28,8 @@ public class IntroButton : MonoBehaviour
 			_images.ShowNext();
 		else
 		{
-			StartCoroutine(_loader.Load());
 			_button.interactable = false;
+			StartCoroutine(_loader.Load());
 		}
 	}
 }

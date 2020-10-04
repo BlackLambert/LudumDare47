@@ -46,4 +46,4 @@ MonoBehaviour:
   _energyPerDash: 0.3
   _energyPerSplash: 0.2
   _dashDuration: 0.66
-  _splashDuration: 0.5
+  _splashDuration: 1
