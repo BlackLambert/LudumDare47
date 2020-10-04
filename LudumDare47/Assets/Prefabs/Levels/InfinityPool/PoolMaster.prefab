@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 5435295641892964981}
   - component: {fileID: 541129087720638888}
   - component: {fileID: 6706860837501801134}
+  - component: {fileID: 9104418006597471473}
   m_Layer: 0
   m_Name: PoolMaster
   m_TagString: Untagged
@@ -166,3 +167,16 @@ MonoBehaviour:
   _animator: {fileID: 5435295641892964981}
   _triggerName: WakingUp
   _onlyOnce: 1
+--- !u!114 &9104418006597471473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8881033506703333478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e92b19be49ed10438848a8925a72d0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _wakeTime: 2
