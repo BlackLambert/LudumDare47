@@ -8,4 +8,14 @@ AnimatorOverrideController:
   m_PrefabAsset: {fileID: 0}
   m_Name: Level1_Child_BlondHair
   m_Controller: {fileID: 9100000, guid: 2b556925f3455bd499a340116c5da064, type: 2}
-  m_Clips: []
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: de9636b8365e383459b28d1250f9eb33, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: becc70cce48b33844a2c9fa24783a3f3, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: d28fcd33bf6d74a4e9a73ea2f74a3188, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 00c1c4010f0326c48b5a804aa1471a6b, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: ee61d93e01faa394c8f574328ee9ff4e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 0240e44c038716a4c9cc1fd2bce62ac6, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 175b45f37b60aaf4db8f473a5c1c992d, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 93a634d1152ddeb42995977ba9600a5d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 454f976020501be4990b86bed0fc258b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f2acb0042599aac4984e93ea887494ca, type: 2}
