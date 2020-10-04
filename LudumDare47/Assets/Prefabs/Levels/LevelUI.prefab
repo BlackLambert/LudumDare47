@@ -149,6 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _button: {fileID: 8264785074517180174}
   _enable: 0
+  _yield: 0
 --- !u!1 &8679705820946673764
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,7 +502,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 88534f374f16c5a4ba587362d476cd73, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c99cadd1673af4f40a3018deb15e4fc4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
