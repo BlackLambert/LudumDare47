@@ -18,6 +18,10 @@ public class Player : MonoBehaviour
     private Animator _animator = null;
     [SerializeField]
     private GameObject _splashRadiusObject = null;
+    [SerializeField]
+    private Animator _splashBackAnimator = null;
+    [SerializeField]
+    private Animator _splashFrontAnimator = null;
 
     protected virtual void Start()
 	{
@@ -38,6 +42,8 @@ public class Player : MonoBehaviour
 	{
         _animator.SetTrigger(_splashTriggerName);
         yield return new WaitForSeconds(0.2f);
+        _splashBackAnimator.SetTrigger(_splashTriggerName);
+        _splashFrontAnimator.SetTrigger(_splashTriggerName);
         _splashRadiusObject.SetActive(true);
         yield return new WaitForSeconds(0.1f);
         _splashRadiusObject.SetActive(false);
