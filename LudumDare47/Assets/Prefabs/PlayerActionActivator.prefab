@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c3993474ec77934e91571d658bbebac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _energyPerDash: 0.3
-  _energyPerSplash: 0.2
+  _energyPerDash: 0.4
+  _energyPerSplash: 0.25
   _dashDuration: 0.66
-  _splashDuration: 1
+  _splashDuration: 0.5

@@ -18,6 +18,8 @@ public class PlayerActionActivator : MonoBehaviour
     private float _splashDuration = 0.66f;
 
 
+    public event Action OnNotEnoughEnergy;
+
     private float _dashTimeStamp = 0;
     private float _splashTimeStamp = 0;
     private Game _game;
@@ -36,8 +38,13 @@ public class PlayerActionActivator : MonoBehaviour
     public void RequestDash(Vector2 direction)
 	{
         float timeDifference = Time.realtimeSinceStartup - _dashTimeStamp;
-        if (!_game.HasEnergy(_energyPerDash) || timeDifference < _dashDuration)
+        if (timeDifference < _dashDuration)
             return;
+        if (!_game.HasEnergy(_energyPerDash))
+        {
+            OnNotEnoughEnergy?.Invoke();
+            return;
+        }
         _game.RequestEnergy(_energyPerDash);
         _dashTimeStamp = Time.realtimeSinceStartup;
         _player.Dash(direction);
@@ -46,8 +53,13 @@ public class PlayerActionActivator : MonoBehaviour
     public void RequestSplash()
 	{
         float timeDifference = Time.realtimeSinceStartup - _splashTimeStamp;
-        if (!_game.HasEnergy(_energyPerSplash) || timeDifference < _splashDuration)
+        if (timeDifference < _splashDuration)
             return;
+        if (!_game.HasEnergy(_energyPerSplash))
+        {
+            OnNotEnoughEnergy?.Invoke();
+            return;
+        }
         _game.RequestEnergy(_energyPerSplash);
         _splashTimeStamp = Time.realtimeSinceStartup;
         _player.Splash();

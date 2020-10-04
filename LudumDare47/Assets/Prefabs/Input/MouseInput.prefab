@@ -43,6 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86499302bb3058a4aaffe2e76efb19f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _clickPositionThreshold: 5
+  _clickPositionThreshold: 7
   _clickMaxTime: 0.3
-  _minDragDistance: 10
+  _minDragDistance: 20
