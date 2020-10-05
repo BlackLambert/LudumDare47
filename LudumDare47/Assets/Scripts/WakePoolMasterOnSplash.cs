@@ -8,6 +8,13 @@ public class WakePoolMasterOnSplash : MonoBehaviour, SplashReceiver
 	private InfinityPoolLevel _level;
 	[SerializeField]
 	private float _wakeTime = 2f;
+	[SerializeField]
+	private AudioSource _awakeSound;
+	[SerializeField]
+	private AudioSource _shoutSound;
+	[SerializeField]
+	private AudioSource _snoreSound;
+
 
 
 	protected virtual void Start()
@@ -24,7 +31,11 @@ public class WakePoolMasterOnSplash : MonoBehaviour, SplashReceiver
 
 	private IEnumerator delayedTrigger()
 	{
+		_snoreSound.enabled = false;
+		_awakeSound.enabled = true;
 		yield return new WaitForSeconds(_wakeTime);
+		_awakeSound.enabled = false;
+		_shoutSound.enabled = true;
 		_level.PoolMasterAwake = true;
 	}
 }

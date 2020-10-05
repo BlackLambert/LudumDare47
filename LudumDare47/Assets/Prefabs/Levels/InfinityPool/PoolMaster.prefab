@@ -262,7 +262,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5102692874459354191}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 171eaccb4e55bfb418703cf2d02e49db, type: 3}
@@ -403,7 +403,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8198207779541513189}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1f93feca1933667488230d0f3fbaf6a6, type: 3}
@@ -606,3 +606,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wakeTime: 2
+  _awakeSound: {fileID: 916881759387908464}
+  _shoutSound: {fileID: 4735909510410546762}
+  _snoreSound: {fileID: 4904349171044450163}

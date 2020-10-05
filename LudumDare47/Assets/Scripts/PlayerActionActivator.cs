@@ -16,6 +16,8 @@ public class PlayerActionActivator : MonoBehaviour
     private float _dashDuration = 1f;
     [SerializeField]
     private float _splashDuration = 0.66f;
+    [SerializeField]
+    private AudioSource _dashSound;
 
 
     public event Action OnNotEnoughEnergy;
@@ -49,6 +51,7 @@ public class PlayerActionActivator : MonoBehaviour
         _game.RequestEnergy(_energyPerDash);
         _dashTimeStamp = Time.realtimeSinceStartup;
         _player.Dash(direction, _dashDuration);
+        _dashSound.Play();
     }
 
     public void RequestSplash()
