@@ -7,9 +7,9 @@ using UnityEngine.UI;
 public class ShowMissingEnergy : MonoBehaviour
 {
     [SerializeField]
-    private Animator _animator;
+    private Animator _animator = null;
     [SerializeField]
-    private string _triggerName;
+    private string _triggerName = "";
 
     private PlayerActionActivator _activator;
     

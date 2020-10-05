@@ -8,21 +8,30 @@ public class LevelTransitioner : MonoBehaviour
     [SerializeField]
     private LoadingScreen _screen = null;
 
-    public void Transition(string currentScene, string nextScene)
+    public void Transition(List<string> scenesToUnload, List<string> scenesToLoad)
 	{
-        StartCoroutine(doTransition(currentScene, nextScene));
+        FindObjectOfType<Coroutiner>().StartCoroutine(doTransition(scenesToUnload, scenesToLoad));
 	}
 
-    private IEnumerator doTransition(string currentScene, string nextScene)
+    private IEnumerator doTransition(List<string> scenesToUnload, List<string> scenesToLoad)
     {
         _screen.Display();
         yield return new WaitForSeconds(0.33f);
-        AsyncOperation operation = SceneManager.UnloadSceneAsync(currentScene);
-        while (!operation.isDone)
-            yield return new WaitForSeconds(0);
-        operation = SceneManager.LoadSceneAsync(nextScene, LoadSceneMode.Additive);
-        while (!operation.isDone)
-            yield return new WaitForSeconds(0);
+        AsyncOperation operation = null;
+        foreach (string scene in scenesToUnload)
+        {
+            Debug.Log(scene);
+            operation = SceneManager.UnloadSceneAsync(scene);
+            while (!operation.isDone)
+                yield return new WaitForSeconds(0);
+        }
+        foreach (string scene in scenesToLoad)
+        {
+            Debug.Log(scene);
+            operation = SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
+            while (!operation.isDone)
+                yield return new WaitForSeconds(0);
+        }
         _screen.Hide();
     }
 }

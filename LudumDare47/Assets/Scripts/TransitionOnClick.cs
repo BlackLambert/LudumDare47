@@ -32,6 +32,6 @@ public class TransitionOnClick : MonoBehaviour
 
 	private void transition()
 	{
-		_transitioner.Transition(_currentLevel, _nextLevel);
+		_transitioner.Transition(new List<string> { _currentLevel }, new List<string> { _nextLevel });
 	}
 }
