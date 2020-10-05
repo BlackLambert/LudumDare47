@@ -837,7 +837,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scenesToLoad:
   - Level
-  - End
+  - InfinityPool
 --- !u!4 &1134295917
 Transform:
   m_ObjectHideFlags: 0
