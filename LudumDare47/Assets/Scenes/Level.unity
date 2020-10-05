@@ -567,7 +567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mouseInputPrefab: {fileID: 6440832703971368739, guid: fbe3d1b6c7f07b64e8aeb98280c17e3f, type: 3}
-  _touchInputPrefab: {fileID: 0}
+  _touchInputPrefab: {fileID: 1489625842850583701, guid: eaa006b258f34ba45875466f76830a1c, type: 3}
 --- !u!4 &1691560079
 Transform:
   m_ObjectHideFlags: 0

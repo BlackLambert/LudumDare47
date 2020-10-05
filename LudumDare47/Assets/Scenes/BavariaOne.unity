@@ -1923,7 +1923,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentLevel: BavariaOne
-  _nextLevel: InfinityPool
+  _nextLevel: End
 --- !u!61 &535820641
 BoxCollider2D:
   m_ObjectHideFlags: 0

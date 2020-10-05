@@ -20,9 +20,9 @@ public class LoadingScreen : MonoBehaviour
 	}
 
     public void Display()
-	{
+    {
+        //_canvas.SetActive(true);
         _animator.SetBool(_displayBoolName, true);
-        _canvas.SetActive(true);
     }
 
     public void Hide()
@@ -34,6 +34,6 @@ public class LoadingScreen : MonoBehaviour
 	{
         _animator.SetBool(_displayBoolName, false);
         yield return new WaitForSeconds(_hideTime);
-        _canvas.SetActive(false);
+        //_canvas.SetActive(false);
     }
 }
