@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fixedAngle: 0
-  _transform: {fileID: 3437162467253794818}
+  _transform: {fileID: 4711647375717758506}
 --- !u!1 &2345573580109621438
 GameObject:
   m_ObjectHideFlags: 0

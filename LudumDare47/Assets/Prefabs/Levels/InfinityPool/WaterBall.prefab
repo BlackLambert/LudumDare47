@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fixedAngle: 0
-  _transform: {fileID: 7702639683967899471}
+  _transform: {fileID: 8311477436998286394}
 --- !u!95 &5929386057988698326
 Animator:
   serializedVersion: 3

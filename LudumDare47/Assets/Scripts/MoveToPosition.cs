@@ -12,27 +12,26 @@ public class MoveToPosition : MonoBehaviour
     [SerializeField]
     private float _duration = 3;
 
-    private Vector3 _distance = Vector3.zero;
-    private float _secondsMoving = 0;
+    private Vector3 _formerPos = Vector3.zero;
+    private float _percent = 1;
 
     public void Move()
 	{
-        _distance = _target.position - _objectToMove.position;
-        _secondsMoving = _duration;
+        _formerPos = _objectToMove.position;
+        _percent = 0;
     }
 
     protected virtual void Update()
 	{
-        if (_secondsMoving <= 0)
+        if (_percent >= 1)
             return;
 
-        float time = Mathf.Min(Time.deltaTime, _secondsMoving);
-        float delta = _duration / time;
-        _secondsMoving -= Time.deltaTime;
-        Vector3 deltaDistance = _distance * delta;
-        _objectToMove.position += deltaDistance;
+        float time = Time.deltaTime;
+        float delta = time / _duration;
+        _percent = Mathf.Clamp01(delta + _percent);
+        _objectToMove.position = _formerPos + _percent * (_target.position - _formerPos);
 
-        if (_secondsMoving <= 0)
+        if (_percent >= 0)
             OnFinish?.Invoke();
     }
 

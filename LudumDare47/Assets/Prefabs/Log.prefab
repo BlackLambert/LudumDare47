@@ -71,7 +71,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.1, y: 0}
-  m_Size: {x: 1.48, y: 4.88}
+  m_Size: {x: 1.14, y: 3.5}
   m_Direction: 0
 --- !u!50 &4635553298801216736
 Rigidbody2D:
@@ -141,6 +141,7 @@ MonoBehaviour:
   _lookAlongVelocity: {fileID: 2128376686634296702}
   _animator: {fileID: 2739891752463271012}
   _inWhirlsBoolSetting: InWhirles
+  _velocitySetter: {fileID: 3701107669548844510}
 --- !u!114 &2603213425341921989
 MonoBehaviour:
   m_ObjectHideFlags: 0

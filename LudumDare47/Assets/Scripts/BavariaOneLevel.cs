@@ -7,9 +7,11 @@ public class BavariaOneLevel : MonoBehaviour
 {
     [SerializeField]
     private float _barrierProgressPerSplash = 0.34f;
+    [SerializeField]
+    private int _logsRequiredForBlock = 2;
 
     private float _barrierProgress = 0;
-    private bool _mainPathBlocked = false;
+    private float _blockProgress = 0;
 
 	public float BarrierProgress
     {
@@ -25,14 +27,7 @@ public class BavariaOneLevel : MonoBehaviour
 
     public bool MainPathBlocked
     {
-        get => _mainPathBlocked;
-        set
-        {
-            if (_mainPathBlocked == value)
-                return;
-            _mainPathBlocked = value;
-            OnMainPathBlockedChanged?.Invoke();
-        }
+        get => _blockProgress >= 1;
     }
 
     public event Action OnBarrierProgressChanged;
@@ -42,5 +37,11 @@ public class BavariaOneLevel : MonoBehaviour
     public void RaiseBarrier()
 	{
         BarrierProgress = Mathf.Clamp01(BarrierProgress + _barrierProgressPerSplash);
+    }
+
+    public void BlockByLog()
+	{
+        _blockProgress += 1f / _logsRequiredForBlock;
+        OnMainPathBlockedChanged?.Invoke();
     }
 }
