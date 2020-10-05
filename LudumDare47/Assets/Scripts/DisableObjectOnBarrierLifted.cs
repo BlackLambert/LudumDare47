@@ -20,7 +20,7 @@ public class DisableObjectOnMainPathBlocked : MonoBehaviour
 
 	protected virtual void OnDestroy()
 	{
-		_level.OnBarrierProgressChanged -= deactivateObject;
+		_level.OnMainPathBlockedChanged -= deactivateObject;
 	}
 
 	private void deactivateObject()
