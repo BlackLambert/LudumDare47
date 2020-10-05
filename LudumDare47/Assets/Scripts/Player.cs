@@ -25,15 +25,28 @@ public class Player : MonoBehaviour
     [SerializeField]
     private Splash _splashPrefab = null;
 
+    private float _dashTime = 0;
+
+    public bool Dashing { get { return _dashTime > 0; } }
+
+
     protected virtual void Start()
 	{
         _splashRadiusObject.SetActive(false);
     }
 
-    public void Dash(Vector2 direction)
+    protected virtual void Update()
+	{
+        if (_dashTime > 0)
+            _dashTime = Mathf.Max(0, _dashTime - Time.deltaTime);
+    }
+
+    public void Dash(Vector2 direction, float time)
 	{
         _rigidbody.AddForce(direction.normalized * _dashForce);
-	}
+        _dashTime = time;
+
+    }
 
     public void Splash()
 	{

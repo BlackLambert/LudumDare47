@@ -638,9 +638,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scenesToLoad:
   - Level
-  - InfinityPool
-  _scenesToUnload:
-  - Intro
+  - BavariaOne
 --- !u!4 &1134295917
 Transform:
   m_ObjectHideFlags: 0

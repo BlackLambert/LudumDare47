@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/InfinityPool.unity
     guid: 06cc1570cc79df74f96bbf4b5a2e67df
   - enabled: 1
+    path: Assets/Scenes/BavariaOne.unity
+    guid: 1cd2b5e4b8ed4ba45959b279d16f68a5
+  - enabled: 1
     path: Assets/Scenes/TestScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

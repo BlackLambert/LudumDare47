@@ -48,7 +48,7 @@ public class PlayerActionActivator : MonoBehaviour
         }
         _game.RequestEnergy(_energyPerDash);
         _dashTimeStamp = Time.realtimeSinceStartup;
-        _player.Dash(direction);
+        _player.Dash(direction, _dashDuration);
     }
 
     public void RequestSplash()

@@ -11,7 +11,7 @@ public class FixedRotation2D : MonoBehaviour
 
 
 
-    protected virtual void FixedUpdate()
+    protected virtual void LateUpdate()
 	{
         _transform.rotation = Quaternion.Euler(new Vector3(_transform.rotation.x, _transform.rotation.y, _fixedAngle));
     }
