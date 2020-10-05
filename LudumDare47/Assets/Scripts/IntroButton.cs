@@ -29,7 +29,7 @@ public class IntroButton : MonoBehaviour
 		else
 		{
 			_button.interactable = false;
-			StartCoroutine(_loader.Load());
+			_loader.Load();
 		}
 	}
 }

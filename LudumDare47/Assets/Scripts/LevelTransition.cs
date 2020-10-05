@@ -27,6 +27,6 @@ public class LevelTransition : MonoBehaviour
 		Player player = collision.gameObject.GetComponent<Player>();
 		if (player == null)
 			return;
-		_transitioner.Transition(_currentLevel, _nextLevel);
+		_transitioner.Transition(new List<string> { _currentLevel }, new List<string> { _nextLevel });
 	}
 }
