@@ -21,6 +21,8 @@ public class Log : MonoBehaviour, DashReceiver
 	private string _inWhirlsBoolSetting = "InWhirles";
 	[SerializeField]
 	private SetAnimatorDirectionByVelocity _velocitySetter = null;
+	[SerializeField]
+	private AudioSource _triggerSound;
 
 	private bool _hittable = false;
 	private bool _hit = false;
@@ -53,6 +55,7 @@ public class Log : MonoBehaviour, DashReceiver
 		_moveToPosition.OnFinish += onMoved;
 		_moveToPosition.Move();
 		_lookAlongVelocity.enabled = false;
+		_triggerSound.Play();
 	}
 
 	private void onMoved()
